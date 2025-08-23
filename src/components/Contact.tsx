@@ -66,7 +66,7 @@ export function Contact() {
 
               <div className="flex gap-4 pt-4">
                 <a
-                  href="#"
+                  href="https://github.com/resulbeser"
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="GitHub"
                 >

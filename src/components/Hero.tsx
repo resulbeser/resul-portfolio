@@ -46,14 +46,14 @@ export function Hero() {
 
           <div className="flex items-center justify-center gap-6">
             <a
-              href="#"
+              href="https://github.com/resulbeser"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
               aria-label="GitHub"
             >
               <Github size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/resulbeser/"
               className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
               aria-label="LinkedIn"
             >
