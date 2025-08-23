@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -7,6 +7,16 @@ export function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const downloadCV = () => {
+    // CV dosyasını indir
+    const link = document.createElement("a");
+    link.href = "/Resul Beşer_CV[EN].pdf";
+    link.download = "Resul-Beser-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -39,23 +49,25 @@ export function Hero() {
                 İletişime Geç
               </Button>
               <Button
+                onClick={downloadCV}
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 text-lg"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 text-lg flex items-center gap-2"
               >
+                <Download size={20} />
                 CV İndir
               </Button>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-6">
               <a
-                href="#"
+                href="https://github.com/resulbeser"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="GitHub"
               >
                 <Github size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/resulbeser/"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="LinkedIn"
               >
