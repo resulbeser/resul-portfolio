@@ -20,13 +20,13 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden pt-20 lg:pt-0">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       <div className="container mx-auto px-6 py-12 relative z-10 max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-items-center">
-          {/* Sol taraf - Metin içeriği */}
-          <div className="animate-fade-in text-center lg:text-left max-w-lg lg:max-w-none lg:justify-self-end lg:pr-8">
+          {/* Sol taraf - Metin içeriği - Mobilde 2. sırada (altta) */}
+          <div className="animate-fade-in text-center lg:text-left max-w-lg lg:max-w-none lg:justify-self-end lg:pr-8 order-2 lg:order-1">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-foreground">Resul</span>{" "}
               <span className="text-primary">Beşer</span>
@@ -83,8 +83,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Sağ taraf - Profil fotoğrafı */}
-          <div className="flex justify-center lg:justify-start animate-slide-in lg:justify-self-start lg:pl-8">
+          {/* Sağ taraf - Profil fotoğrafı - Mobilde 1. sırada (üstte) */}
+          <div className="flex justify-center lg:justify-start animate-slide-in lg:justify-self-start lg:pl-8 order-1 lg:order-2">
             <div className="relative group">
               {/* Arka plan dekoratif daire */}
               <div className="absolute inset-0 bg-gradient-primary rounded-full scale-110 opacity-20 group-hover:scale-125 transition-transform duration-500"></div>
