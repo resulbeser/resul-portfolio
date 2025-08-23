@@ -1,7 +1,7 @@
 export function Skills() {
   const skills = [
     {
-      category: "Frontend Development",
+      category: "Frontend",
       items: [
         "React.js",
         "Next.js",
@@ -17,12 +17,44 @@ export function Skills() {
       ],
     },
     {
+      category: "Backend",
+      items: [
+        "Java",
+        "Spring Boot",
+        "RESTful API",
+        "PostgreSQL",
+        "MongoDB",
+        "JWT",
+        "Maven",
+        "Docker",
+        "Jenkins",
+      ],
+    },
+    {
+      category: "Testing & Automation",
+      items: [
+        "Selenium",
+        "JUnit 5",
+        "Gauge",
+        "Vitest",
+        "Postman",
+        "Test Otomasyonu",
+      ],
+    },
+
+    {
       category: "Tools & Others",
       items: [
-        { name: "Git", level: 90 },
-        { name: "Figma", level: 85 },
-        { name: "Node.js", level: 75 },
-        { name: "MongoDB", level: 70 },
+        "Git",
+        "GitHub",
+        "Bitbucket",
+        "Vercel",
+        "CI/CD",
+        "Maven",
+        "Docker",
+        "Jira",
+        "Agile",
+        "Scrum",
       ],
     },
   ];
@@ -35,33 +67,33 @@ export function Skills() {
             <span className="text-primary">Yetenekler</span>
           </h2>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              {skills.map((skillGroup, groupIndex) => (
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* İlk 3 kart */}
+              {skills.slice(0, 3).map((skillGroup, groupIndex) => (
                 <div
                   key={groupIndex}
-                  className={`bg-gradient-card rounded-2xl p-8 shadow-soft transition-all duration-300 ${
-                    skillGroup.category === "Frontend Development"
-                      ? "hover:shadow-hover hover:scale-105 cursor-pointer"
-                      : ""
-                  }`}
+                  className={`bg-background rounded-2xl p-8 shadow-soft transition-all duration-300 h-80 hover:shadow-hover hover:scale-105 cursor-pointer`}
                 >
                   <h3 className="text-2xl font-bold mb-8 text-primary">
                     {skillGroup.category}
                   </h3>
 
                   <div className="space-y-6">
-                    {skillGroup.category === "Frontend Development" ? (
-                      // Frontend için sadece liste görünümü
-                      <div className="max-h-64 overflow-y-auto scrollbar-hide">
-                        <div className="grid grid-cols-2 gap-3">
+                    {skillGroup.category === "Frontend" ||
+                    skillGroup.category === "Backend" ||
+                    skillGroup.category === "Testing & Automation" ||
+                    skillGroup.category === "Tools & Others" ? (
+                      // Tüm kategoriler için liste görünümü
+                      <div className="max-h-44 overflow-y-auto scrollbar-hide">
+                        <div className="grid grid-cols-2 gap-2">
                           {skillGroup.items.map((skill, skillIndex) => (
                             <div
                               key={skillIndex}
-                              className="flex items-center gap-2 p-3 bg-gradient-primary rounded-lg hover:bg-gradient-primary/90 hover:shadow-md transition-all duration-200 cursor-pointer"
+                              className="flex items-center gap-2 p-2.5 bg-gradient-primary rounded-lg hover:bg-gradient-primary/90 hover:shadow-md transition-all duration-200 cursor-pointer"
                             >
-                              <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-                              <span className="font-medium text-primary-foreground text-sm">
+                              <div className="w-2 h-2 bg-primary-foreground rounded-full flex-shrink-0"></div>
+                              <span className="font-medium text-primary-foreground text-sm leading-tight">
                                 {skill}
                               </span>
                             </div>
@@ -69,29 +101,43 @@ export function Skills() {
                         </div>
                       </div>
                     ) : (
-                      // Diğer kategoriler için progress bar görünümü
-                      skillGroup.items.map((skill, skillIndex) => (
-                        <div key={skillIndex}>
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="font-medium text-foreground">
-                              {skill.name}
-                            </span>
-                            <span className="text-muted-foreground">
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <div className="w-full bg-border rounded-full h-2">
-                            <div
-                              className="bg-gradient-primary h-2 rounded-full transition-all duration-1000 ease-out"
-                              style={{ width: `${skill.level}%` }}
-                            />
-                          </div>
-                        </div>
-                      ))
+                      // Diğer kategoriler için progress bar görünümü (şu anda kullanılmıyor)
+                      <div></div>
                     )}
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Son kart - Tools & Others ortalanmış */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+              <div></div> {/* Boş alan */}
+              <div
+                className={`bg-background rounded-2xl p-8 shadow-soft transition-all duration-300 h-80 hover:shadow-hover hover:scale-105 cursor-pointer`}
+              >
+                <h3 className="text-2xl font-bold mb-8 text-primary">
+                  {skills[3].category}
+                </h3>
+
+                <div className="space-y-6">
+                  <div className="max-h-44 overflow-y-auto scrollbar-hide">
+                    <div className="grid grid-cols-2 gap-2">
+                      {skills[3].items.map((skill, skillIndex) => (
+                        <div
+                          key={skillIndex}
+                          className="flex items-center gap-2 p-2.5 bg-gradient-primary rounded-lg hover:bg-gradient-primary/90 hover:shadow-md transition-all duration-200 cursor-pointer"
+                        >
+                          <div className="w-2 h-2 bg-primary-foreground rounded-full flex-shrink-0"></div>
+                          <span className="font-medium text-primary-foreground text-sm leading-tight">
+                            {skill}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div></div> {/* Boş alan */}
             </div>
           </div>
         </div>
