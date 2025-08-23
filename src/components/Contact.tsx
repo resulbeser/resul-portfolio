@@ -46,7 +46,7 @@ export function Contact() {
                   <div>
                     <div className="font-medium text-foreground">Telefon</div>
                     <div className="text-muted-foreground">
-                      +90 555 123 45 67
+                      +90 540 614 14 61
                     </div>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export function Contact() {
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/resulbeser/"
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="LinkedIn"
                 >
