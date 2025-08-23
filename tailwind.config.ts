@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -119,14 +120,53 @@ export default {
             transform: "translateX(0)",
           },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "spin-reverse": {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px) rotate(45deg)" },
+          "50%": { transform: "translateY(-20px) rotate(45deg)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
+        "bounce-slow": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.05" },
+          "50%": { opacity: "0.1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.6s ease-out",
+        "spin-slow": "spin-slow 8s linear infinite",
+        "spin-reverse": "spin-reverse 12s linear infinite",
+        float: "float 3s ease-in-out infinite",
+        "float-delayed": "float-delayed 4s ease-in-out infinite 1s",
+        "pulse-slow": "pulse-slow 2s ease-in-out infinite",
+        "bounce-slow": "bounce-slow 3s ease-in-out infinite 0.5s",
+        "pulse-glow": "pulse-glow 4s ease-in-out infinite",
+      },
+      animationDelay: {
+        "500": "500ms",
+        "1000": "1000ms",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

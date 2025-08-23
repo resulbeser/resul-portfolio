@@ -1,12 +1,19 @@
 export function Skills() {
   const skills = [
     {
-      category: "Frontend",
+      category: "Frontend Development",
       items: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 95 },
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Redux Toolkit",
+        "Vite",
+        "Tailwind CSS",
+        "HTML5 / CSS3",
+        "Bootstrap",
+        "WebSocket",
+        "Storybook",
+        "CesiumJS",
       ],
     },
     {
@@ -33,31 +40,55 @@ export function Skills() {
               {skills.map((skillGroup, groupIndex) => (
                 <div
                   key={groupIndex}
-                  className="bg-gradient-card rounded-2xl p-8 shadow-soft"
+                  className={`bg-gradient-card rounded-2xl p-8 shadow-soft transition-all duration-300 ${
+                    skillGroup.category === "Frontend Development"
+                      ? "hover:shadow-hover hover:scale-105 cursor-pointer"
+                      : ""
+                  }`}
                 >
                   <h3 className="text-2xl font-bold mb-8 text-primary">
                     {skillGroup.category}
                   </h3>
 
                   <div className="space-y-6">
-                    {skillGroup.items.map((skill, skillIndex) => (
-                      <div key={skillIndex}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium text-foreground">
-                            {skill.name}
-                          </span>
-                          <span className="text-muted-foreground">
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-border rounded-full h-2">
-                          <div
-                            className="bg-gradient-primary h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.level}%` }}
-                          />
+                    {skillGroup.category === "Frontend Development" ? (
+                      // Frontend için sadece liste görünümü
+                      <div className="max-h-64 overflow-y-auto scrollbar-hide">
+                        <div className="grid grid-cols-2 gap-3">
+                          {skillGroup.items.map((skill, skillIndex) => (
+                            <div
+                              key={skillIndex}
+                              className="flex items-center gap-2 p-3 bg-gradient-primary rounded-lg hover:bg-gradient-primary/90 hover:shadow-md transition-all duration-200 cursor-pointer"
+                            >
+                              <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+                              <span className="font-medium text-primary-foreground text-sm">
+                                {skill}
+                              </span>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                    ))}
+                    ) : (
+                      // Diğer kategoriler için progress bar görünümü
+                      skillGroup.items.map((skill, skillIndex) => (
+                        <div key={skillIndex}>
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="font-medium text-foreground">
+                              {skill.name}
+                            </span>
+                            <span className="text-muted-foreground">
+                              {skill.level}%
+                            </span>
+                          </div>
+                          <div className="w-full bg-border rounded-full h-2">
+                            <div
+                              className="bg-gradient-primary h-2 rounded-full transition-all duration-1000 ease-out"
+                              style={{ width: `${skill.level}%` }}
+                            />
+                          </div>
+                        </div>
+                      ))
+                    )}
                   </div>
                 </div>
               ))}

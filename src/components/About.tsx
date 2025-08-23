@@ -10,14 +10,18 @@ export function About() {
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  3+ yıllık deneyimim ile modern web teknolojilerinde
-                  uzmanlaşmış bir frontend developer'ım. Kullanıcı deneyimi
-                  odaklı, performanslı ve erişilebilir web uygulamaları
-                  geliştiriyorum.
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed text-justify">
+                  Yeni mezun bir bilgisayar mühendisiyim. Eğitimim ve projelerim
+                  boyunca hem frontend hem de backend teknolojileri üzerine
+                  çalıştım. Ayrıca test otomasyonu deneyimlerim sayesinde
+                  yazılım geliştirme sürecinin farklı aşamalarına hâkimim.
+                  Kullanıcı deneyimi odaklı, performanslı ve sürdürülebilir
+                  yazılım çözümleri geliştirmeyi hedefliyorum. Öğrenmeye açık,
+                  takım çalışmasına uyumlu ve modern yazılım geliştirme
+                  prensiplerine önem veren bir geliştiriciyim.
                 </p>
 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed text-justify">
                   React, TypeScript ve modern CSS framework'leri ile çalışmayı
                   seviyorum. Her projede temiz kod yazma prensiplerine bağlı
                   kalarak, sürdürülebilir ve ölçeklenebilir çözümler üretmeye
@@ -33,18 +37,24 @@ export function About() {
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-foreground">UI/UX Design</span>
+                    <span className="text-foreground">Backend Development</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-foreground">
-                      Responsive Web Design
+                      Test Automation & QA
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-foreground">
-                      Performance Optimization
+                      UI/UX & Responsive Design
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-foreground">
+                      Clean Code & Best Practices
                     </span>
                   </div>
                 </div>
@@ -54,7 +64,7 @@ export function About() {
                 <div className="bg-gradient-card rounded-2xl p-8 shadow-soft">
                   <div className="bg-gradient-primary rounded-xl p-6 text-center">
                     <div className="text-3xl font-bold text-primary-foreground mb-2">
-                      3+
+                      1+
                     </div>
                     <div className="text-primary-foreground/80">
                       Yıl Deneyim
@@ -64,16 +74,19 @@ export function About() {
                   <div className="grid grid-cols-2 gap-4 mt-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-primary mb-1">
-                        50+
+                        5+
                       </div>
-                      <div className="text-muted-foreground text-sm">Proje</div>
+                      <div className="text-muted-foreground text-sm">
+                        {" "}
+                        Tamamlanan Proje
+                      </div>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-primary mb-1">
                         100%
                       </div>
                       <div className="text-muted-foreground text-sm">
-                        Memnuniyet
+                        Öğrenme Tutkusu
                       </div>
                     </div>
                   </div>

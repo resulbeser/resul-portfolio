@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -7,16 +7,6 @@ export function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const downloadCV = () => {
-    // CV dosyasını indir
-    const link = document.createElement("a");
-    link.href = "/Resul Beşer_CV[EN].pdf";
-    link.download = "Resul-Beser-CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -33,12 +23,12 @@ export function Hero() {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-              Frontend Developer & UI/UX Designer
+              Software Developer
             </p>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl lg:max-w-none">
               Modern web teknolojileri ile kullanıcı deneyimi odaklı, estetik ve
-              işlevsel arayüzler tasarlıyorum.
+              işlevsel yazılım çözümleri geliştiriyorum.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start justify-center gap-4 mb-8">
@@ -49,25 +39,23 @@ export function Hero() {
                 İletişime Geç
               </Button>
               <Button
-                onClick={downloadCV}
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 text-lg flex items-center gap-2"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 text-lg"
               >
-                <Download size={20} />
                 CV İndir
               </Button>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-6">
               <a
-                href="https://github.com/resulbeser"
+                href="#"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="GitHub"
               >
                 <Github size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/resulbeser/"
+                href="#"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="LinkedIn"
               >
@@ -101,10 +89,18 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </div>
 
-              {/* Floating decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-teal rounded-full animate-pulse opacity-60"></div>
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-mint rounded-full animate-pulse opacity-40 animation-delay-1000"></div>
-              <div className="absolute top-1/4 -left-8 w-4 h-4 bg-fresh-blue rounded-full animate-pulse opacity-50 animation-delay-500"></div>
+              {/* Rotating decorative rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20 scale-125 animate-spin-slow"></div>
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-teal/30 scale-150 animate-spin-reverse"></div>
+
+              {/* Floating geometric elements */}
+              <div className="absolute -top-8 -right-8 w-6 h-6 bg-gradient-primary rounded-lg animate-float rotate-45 opacity-70"></div>
+              <div className="absolute -bottom-10 -left-10 w-8 h-8 border-2 border-mint rounded-full animate-float-delayed opacity-60"></div>
+              <div className="absolute top-1/3 -left-12 w-4 h-4 bg-fresh-blue/70 transform rotate-45 animate-pulse-slow"></div>
+              <div className="absolute bottom-1/3 -right-12 w-5 h-5 border-2 border-primary/40 rounded-full animate-bounce-slow"></div>
+
+              {/* Glow effects */}
+              <div className="absolute inset-0 bg-gradient-primary rounded-full scale-110 opacity-5 animate-pulse-glow"></div>
             </div>
           </div>
         </div>
