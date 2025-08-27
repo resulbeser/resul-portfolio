@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
+import { trackProjectView, trackExternalLink } from "@/lib/analytics";
 
 export function Projects() {
   const [expandedDescriptions, setExpandedDescriptions] = useState<{
@@ -17,6 +18,11 @@ export function Projects() {
   const truncateText = (text: string, maxLength: number = 120) => {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength).trim();
+  };
+
+  const handleProjectClick = (projectName: string, linkType: 'github' | 'live', url: string) => {
+    trackProjectView(projectName);
+    trackExternalLink(url, `${projectName}_${linkType}`);
   };
   const projects = [
     {
@@ -137,6 +143,7 @@ export function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => handleProjectClick(project.title, 'github', project.githubUrl)}
                       >
                         <Github className="w-4 h-4 mr-2" />
                         Code
@@ -154,6 +161,7 @@ export function Projects() {
                         }
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => project.liveUrl !== "#" && handleProjectClick(project.title, 'live', project.liveUrl)}
                         className={
                           project.liveUrl === "#"
                             ? "pointer-events-none opacity-50"

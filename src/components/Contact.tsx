@@ -2,8 +2,28 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { trackContactForm, trackExternalLink } from "@/lib/analytics";
 
 export function Contact() {
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    trackContactForm('form');
+    // Form submission logic will be added here
+    console.log('Form submitted - Analytics tracked');
+  };
+
+  const handleEmailClick = () => {
+    trackContactForm('email');
+  };
+
+  const handlePhoneClick = () => {
+    trackContactForm('phone');
+  };
+
+  const handleSocialClick = (platform: string, url: string) => {
+    trackExternalLink(url, platform);
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -69,6 +89,7 @@ export function Contact() {
                   href="https://github.com/resulbeser"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSocialClick('GitHub', 'https://github.com/resulbeser')}
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="GitHub"
                 >
@@ -78,6 +99,7 @@ export function Contact() {
                   href="https://www.linkedin.com/in/resulbeser/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSocialClick('LinkedIn', 'https://www.linkedin.com/in/resulbeser/')}
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="LinkedIn"
                 >
@@ -85,6 +107,7 @@ export function Contact() {
                 </a>
                 <a
                   href="mailto:resulbeser1@gmail.com"
+                  onClick={handleEmailClick}
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="Email"
                 >
@@ -100,7 +123,7 @@ export function Contact() {
                   Mesaj Gönder
                 </h3>
 
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleFormSubmit}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
