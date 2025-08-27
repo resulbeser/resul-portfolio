@@ -1,3 +1,7 @@
+User-agent: *
+Allow: /
+
+# Search engine crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +14,8 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Sitemap
+Sitemap: https://resulbeser.dev/sitemap.xml
+
+# Host
+Host: https://resulbeser.dev

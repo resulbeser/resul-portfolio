@@ -1,42 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <title>Resul Beşer - Frontend Developer & UI/UX Designer</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- SEO Meta Tags -->
+    <title>Resul Beşer - Software Developer | Modern Web Çözümleri</title>
     <meta
       name="description"
-      content="Frontend Developer ve UI/UX Designer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı çözümler üretiyorum."
+      content="Software Developer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı, estetik ve işlevsel yazılım çözümleri geliştiriyorum. React, TypeScript, JavaScript uzmanı."
     />
     <meta name="author" content="Resul Beşer" />
     <meta
       name="keywords"
-      content="frontend developer, ui/ux designer, react, typescript, web developer, portfolio"
+      content="software developer, yazılım geliştirici, react developer, typescript, javascript, web developer, frontend developer, portfolio, resul beşer"
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Turkish" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://resulbeser.dev/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://resulbeser.dev/" />
     <meta
       property="og:title"
-      content="Resul Beşer - Frontend Developer & UI/UX Designer"
+      content="Resul Beşer - Software Developer | Modern Web Çözümleri"
     />
     <meta
       property="og:description"
-      content="Frontend Developer ve UI/UX Designer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı çözümler üretiyorum."
+      content="Software Developer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı, estetik ve işlevsel yazılım çözümleri geliştiriyorum."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://resulbeser.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Resul Beşer Portfolio" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://resulbeser.dev/" />
     <meta
-      property="og:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
+      property="twitter:title"
+      content="Resul Beşer - Software Developer | Modern Web Çözümleri"
+    />
+    <meta
+      property="twitter:description"
+      content="Software Developer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı, estetik ve işlevsel yazılım çözümleri geliştiriyorum."
+    />
+    <meta
+      property="twitter:image"
+      content="https://resulbeser.dev/og-image.png"
     />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta
-      name="twitter:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://resulbeser.dev/#person",
+            "name": "Resul Beşer",
+            "jobTitle": "Software Developer",
+            "description": "Software Developer olarak modern web teknolojileri ile kullanıcı deneyimi odaklı çözümler geliştiren profesyonel.",
+            "url": "https://resulbeser.dev",
+            "sameAs": [
+              "https://github.com/resulbeser",
+              "https://www.linkedin.com/in/resulbeser/"
+            ],
+            "knowsAbout": [
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "Web Development",
+              "Frontend Development",
+              "Software Development"
+            ],
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Software Development"
+            },
+            "workLocation": {
+              "@type": "Place",
+              "name": "İstanbul, Türkiye"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://resulbeser.dev/#website",
+            "url": "https://resulbeser.dev",
+            "name": "Resul Beşer Portfolio",
+            "description": "Software Developer Resul Beşer'in kişisel portfolio websitesi",
+            "publisher": {
+              "@id": "https://resulbeser.dev/#person"
+            },
+            "inLanguage": "tr-TR",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://resulbeser.dev/?s={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
