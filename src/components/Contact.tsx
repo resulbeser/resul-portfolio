@@ -6,13 +6,13 @@ import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 export function Contact() {
   return (
     <section id="contact" className="py-20 bg-gradient-hero">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-6xl">
         <div className="animate-fade-in">
           <h2 className="text-4xl font-bold mb-16 text-center">
             <span className="text-primary">İletişim</span>
           </h2>
 
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:-ml-20">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -34,7 +34,7 @@ export function Contact() {
                   <div>
                     <div className="font-medium text-foreground">Email</div>
                     <div className="text-muted-foreground">
-                      resul.beser@example.com
+                      resulbeser1@gmail.com
                     </div>
                   </div>
                 </div>
@@ -67,6 +67,8 @@ export function Contact() {
               <div className="flex gap-4 pt-4">
                 <a
                   href="https://github.com/resulbeser"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="GitHub"
                 >
@@ -74,13 +76,15 @@ export function Contact() {
                 </a>
                 <a
                   href="https://www.linkedin.com/in/resulbeser/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:resulbeser1@gmail.com"
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="Email"
                 >
@@ -90,62 +94,64 @@ export function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gradient-card rounded-2xl p-8 shadow-soft">
-              <h3 className="text-xl font-bold mb-6 text-foreground">
-                Mesaj Gönder
-              </h3>
-
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Ad Soyad
-                    </label>
-                    <Input
-                      placeholder="Adınız ve soyadınız"
-                      className="bg-background border-border focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Email
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="email@example.com"
-                      className="bg-background border-border focus:border-primary"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Konu
-                  </label>
-                  <Input
-                    placeholder="Mesaj konusu"
-                    className="bg-background border-border focus:border-primary"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Mesaj
-                  </label>
-                  <Textarea
-                    placeholder="Mesajınızı buraya yazın..."
-                    rows={5}
-                    className="bg-background border-border focus:border-primary resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-primary hover:shadow-hover transition-all duration-300 py-3 text-lg"
-                >
+            <div className="lg:col-start-2 lg:translate-x-28">
+              <div className="bg-gradient-card rounded-2xl p-8 shadow-soft">
+                <h3 className="text-xl font-bold mb-6 text-foreground">
                   Mesaj Gönder
-                </Button>
-              </form>
+                </h3>
+
+                <form className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Ad Soyad
+                      </label>
+                      <Input
+                        placeholder="Adınız ve soyadınız"
+                        className="bg-background border-border focus:border-primary"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Email
+                      </label>
+                      <Input
+                        type="email"
+                        placeholder="email@example.com"
+                        className="bg-background border-border focus:border-primary"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Konu
+                    </label>
+                    <Input
+                      placeholder="Mesaj konusu"
+                      className="bg-background border-border focus:border-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Mesaj
+                    </label>
+                    <Textarea
+                      placeholder="Mesajınızı buraya yazın..."
+                      rows={5}
+                      className="bg-background border-border focus:border-primary resize-none"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-primary hover:shadow-hover transition-all duration-300 py-3 text-lg"
+                  >
+                    Mesaj Gönder
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

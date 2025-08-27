@@ -4,33 +4,35 @@ export function Footer() {
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 lg:-ml-20">
+          <div className="text-center md:text-left lg:translate-x-20">
             <div className="text-xl font-bold text-primary mb-2">
               Resul Beşer
             </div>
-            <div className="text-muted-foreground">
-              Frontend Developer & UI/UX Designer
-            </div>
+            <div className="text-muted-foreground">Software Developer</div>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 lg:-translate-x-1">
             <a
-              href="#"
+              href="https://github.com/resulbeser"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/resulbeser/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
             <a
-              href="#"
+              href="mailto:resulbeser1@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="Email"
             >
@@ -41,7 +43,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Resul Beşer. Tüm hakları saklıdır.
+            © 2025 Resul Beşer. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

@@ -14,9 +14,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
       <div className="container mx-auto px-6 py-12 relative z-10 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Sol taraf - Metin içeriği - Mobilde 2. sırada (altta) */}
-          <div className="animate-fade-in text-center lg:text-left max-w-lg lg:max-w-none lg:justify-self-end lg:pr-8 order-2 lg:order-1">
+          <div className="animate-fade-in text-center lg:text-left order-2 lg:order-1 lg:pr-8 lg:-ml-20">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-foreground">Resul</span>{" "}
               <span className="text-primary">Beşer</span>
@@ -41,28 +41,40 @@ export function Hero() {
               <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-8 py-3 text-lg"
+                asChild
               >
-                CV İndir
+                <a
+                  href="/Resul Beşer_CV[EN].pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  CV İndir
+                </a>
               </Button>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-6">
               <a
-                href="#"
+                href="https://github.com/resulbeser"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="GitHub"
               >
                 <Github size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/resulbeser/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={24} />
               </a>
               <a
-                href="#"
+                href="mailto:resulbeser1@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 p-2"
                 aria-label="Email"
               >
@@ -72,7 +84,7 @@ export function Hero() {
           </div>
 
           {/* Sağ taraf - Profil fotoğrafı - Mobilde 1. sırada (üstte) */}
-          <div className="flex justify-center lg:justify-start animate-slide-in lg:justify-self-start lg:pl-8 order-1 lg:order-2">
+          <div className="flex justify-center lg:justify-end animate-slide-in order-1 lg:order-2 lg:pl-20">
             <div className="relative group">
               {/* Arka plan dekoratif daire */}
               <div className="absolute inset-0 bg-gradient-primary rounded-full scale-110 opacity-20 group-hover:scale-125 transition-transform duration-500"></div>
