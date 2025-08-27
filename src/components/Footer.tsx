@@ -22,7 +22,9 @@ export function Footer() {
               href="https://github.com/resulbeser"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleSocialClick('GitHub', 'https://github.com/resulbeser')}
+              onClick={() =>
+                handleSocialClick("GitHub", "https://github.com/resulbeser")
+              }
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="GitHub"
             >
@@ -32,7 +34,12 @@ export function Footer() {
               href="https://www.linkedin.com/in/resulbeser/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => handleSocialClick('LinkedIn', 'https://www.linkedin.com/in/resulbeser/')}
+              onClick={() =>
+                handleSocialClick(
+                  "LinkedIn",
+                  "https://www.linkedin.com/in/resulbeser/"
+                )
+              }
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="LinkedIn"
             >
@@ -40,7 +47,9 @@ export function Footer() {
             </a>
             <a
               href="mailto:resulbeser1@gmail.com"
-              onClick={() => handleSocialClick('Email', 'mailto:resulbeser1@gmail.com')}
+              onClick={() =>
+                handleSocialClick("Email", "mailto:resulbeser1@gmail.com")
+              }
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="Email"
             >

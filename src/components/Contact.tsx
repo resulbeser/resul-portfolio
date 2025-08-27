@@ -7,17 +7,17 @@ import { trackContactForm, trackExternalLink } from "@/lib/analytics";
 export function Contact() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackContactForm('form');
+    trackContactForm("form");
     // Form submission logic will be added here
-    console.log('Form submitted - Analytics tracked');
+    console.log("Form submitted - Analytics tracked");
   };
 
   const handleEmailClick = () => {
-    trackContactForm('email');
+    trackContactForm("email");
   };
 
   const handlePhoneClick = () => {
-    trackContactForm('phone');
+    trackContactForm("phone");
   };
 
   const handleSocialClick = (platform: string, url: string) => {
@@ -89,7 +89,9 @@ export function Contact() {
                   href="https://github.com/resulbeser"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => handleSocialClick('GitHub', 'https://github.com/resulbeser')}
+                  onClick={() =>
+                    handleSocialClick("GitHub", "https://github.com/resulbeser")
+                  }
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="GitHub"
                 >
@@ -99,7 +101,12 @@ export function Contact() {
                   href="https://www.linkedin.com/in/resulbeser/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => handleSocialClick('LinkedIn', 'https://www.linkedin.com/in/resulbeser/')}
+                  onClick={() =>
+                    handleSocialClick(
+                      "LinkedIn",
+                      "https://www.linkedin.com/in/resulbeser/"
+                    )
+                  }
                   className="bg-primary/10 p-3 rounded-xl text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="LinkedIn"
                 >

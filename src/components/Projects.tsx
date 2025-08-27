@@ -20,7 +20,11 @@ export function Projects() {
     return text.substring(0, maxLength).trim();
   };
 
-  const handleProjectClick = (projectName: string, linkType: 'github' | 'live', url: string) => {
+  const handleProjectClick = (
+    projectName: string,
+    linkType: "github" | "live",
+    url: string
+  ) => {
     trackProjectView(projectName);
     trackExternalLink(url, `${projectName}_${linkType}`);
   };
@@ -143,7 +147,13 @@ export function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => handleProjectClick(project.title, 'github', project.githubUrl)}
+                        onClick={() =>
+                          handleProjectClick(
+                            project.title,
+                            "github",
+                            project.githubUrl
+                          )
+                        }
                       >
                         <Github className="w-4 h-4 mr-2" />
                         Code
@@ -161,7 +171,14 @@ export function Projects() {
                         }
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => project.liveUrl !== "#" && handleProjectClick(project.title, 'live', project.liveUrl)}
+                        onClick={() =>
+                          project.liveUrl !== "#" &&
+                          handleProjectClick(
+                            project.title,
+                            "live",
+                            project.liveUrl
+                          )
+                        }
                         className={
                           project.liveUrl === "#"
                             ? "pointer-events-none opacity-50"
