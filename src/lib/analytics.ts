@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-export const GA_MEASUREMENT_ID = "G-YDFQXG6YQF"; // Google Analytics ID
+export const GA_MEASUREMENT_ID = "G-YDFQXG6YQF";
 
 // Initialize Google Analytics
 export const initGA = () => {
