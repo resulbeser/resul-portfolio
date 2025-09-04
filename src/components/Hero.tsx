@@ -11,7 +11,7 @@ export function Hero() {
   };
 
   const handleCVDownload = () => {
-    trackDownload("Resul_Beser_CV_EN.pdf");
+    trackDownload("Resul Beşer_CV[EN]_Web.pdf");
   };
 
   const handleSocialClick = (platform: string, url: string) => {
