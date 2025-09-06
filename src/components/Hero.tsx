@@ -53,7 +53,7 @@ export function Hero() {
                 asChild
               >
                 <a
-                  href="/Resul Beşer_CV[EN].pdf"
+                  href="/Resul Beşer_CV[EN]_Web.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download
